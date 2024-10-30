@@ -1,0 +1,519 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MDO - Rougeole",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Patient anonymisé",
+      "type": "group",
+      "linkId": "253242976116",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Sexe",
+          "linkId": "8333908817868",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "h",
+                "display": "H"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "f",
+                "display": "F"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Signes cliniques",
+      "linkId": "32649070842",
+      "type": "group",
+      "item": [
+        {
+          "text": "Date de début de l'éruption",
+          "linkId": "8681202964033",
+          "type": "date"
+        },
+        {
+          "text": "Fièvre >= 38,5 °C",
+          "linkId": "2610517919747",
+          "type": "boolean"
+        },
+        {
+          "text": "Exanthème maculo-papuleux",
+          "linkId": "4903629641896",
+          "type": "boolean"
+        },
+        {
+          "text": "Exanthème maculo-papuleux généralisé",
+          "linkId": "8016796124600",
+          "type": "boolean"
+        },
+        {
+          "text": "Hospitalisation",
+          "linkId": "8220046814829",
+          "type": "boolean",
+          "item": [
+            {
+              "text": "Date de l’hospitalisation",
+              "linkId": "9417689562531",
+              "type": "date",
+              "enableWhen": [
+                {
+                  "question": "8220046814829",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Lieu de l’hospitalisation",
+              "linkId": "3928928663368",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "8220046814829",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Séjour en réanimation",
+              "linkId": "8760437152512",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "8220046814829",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Complications",
+          "linkId": "8687270374275",
+          "type": "boolean",
+          "item": [
+            {
+              "text": "encéphalite",
+              "linkId": "3845900513572",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "8687270374275",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "pneumopathie",
+              "linkId": "7478279318458",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "8687270374275",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "autre",
+              "linkId": "1476926228302",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "8687270374275",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "all"
+            }
+          ]
+        },
+        {
+          "text": "Evolution (à date)",
+          "linkId": "2245875928716",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "M",
+                "display": "Malade"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "G",
+                "display": "Guéri"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "D",
+                "display": "Décès"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "Si décès, date",
+              "linkId": "4353891263140",
+              "type": "date",
+              "enableWhen": [
+                {
+                  "question": "2245875928716",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "D",
+                    "display": "Décès"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Confirmation du diagnostic",
+      "linkId": "5992700292949",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Confirmation biologique demandée",
+          "linkId": "7231189676510",
+          "type": "boolean",
+          "item": [
+            {
+              "text": "recherche d’IgM salivaires",
+              "linkId": "5924842250982",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "P",
+                    "display": "Positif"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "N",
+                    "display": "Négatif"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "EC",
+                    "display": "En cours"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "7231189676510",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "recherche d’IgM sériques",
+              "linkId": "2581177875128",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "P",
+                    "display": "Positif"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "N",
+                    "display": "Négatif"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "EC",
+                    "display": "En cours"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "7231189676510",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "séroconversion, ascension des IgG",
+              "linkId": "7610845007369",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "7231189676510",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "O",
+                    "display": "Oui"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "N",
+                    "display": "Non"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "EC",
+                    "display": "En cours"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "PCR/Isolement du virus",
+              "linkId": "613578080368",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "7231189676510",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Origine possible de la contamination",
+      "linkId": "6110461393439",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Séjour à l’étranger dans les 7 à 18 jours avant le début de l’éruption",
+          "linkId": "3583813897312",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "O",
+                "display": "Oui"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "Non"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NSP",
+                "display": "Ne sait pas"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "préciser le pays",
+              "linkId": "596727291789",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "3583813897312",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "O",
+                    "display": "Oui"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Contact avec un cas de rougeole 7 à 18 jours avant le début de l’éruption",
+          "linkId": "1874134320307",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "O",
+                "display": "Oui"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "Non"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NSP",
+                "display": "Ne sait pas"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "Lieu",
+              "linkId": "1071093527520",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "F",
+                    "display": "Famille"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "G",
+                    "display": "Lieu de garde"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "E",
+                    "display": "Ecole"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "A",
+                    "display": "Autre"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "1874134320307",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "O",
+                    "display": "Oui"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "S’agit-il d’un cas confirmé",
+              "linkId": "4304835680636",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "O",
+                    "display": "Oui"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "N",
+                    "display": "Non"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "NSP",
+                    "display": "NSP"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "1874134320307",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "O",
+                    "display": "Oui"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Autres cas dans l’entourage",
+          "linkId": "1861154548134",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "O",
+                "display": "Oui"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "Non"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NSP",
+                "display": "Ne sait pas"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Antécédents vaccinaux",
+      "linkId": "9572232804968",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Le sujet est-il vacciné contre la rougeole ?",
+          "linkId": "1356224458706",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "O",
+                "display": "Oui"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "Non"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "description": "Critères de notification • Cas clinique : fièvre ≥38,5 °C associée à une éruption maculo- papuleuse et à au moins un des signes suivants : conjonctivite, coryza, toux, signe de Koplik. • Cas confirmé : - cas confirmé biologiquement (détection d’IgM spécifiques* dans la salive ou le sérum et/ou séroconversion ou élévation de quatre fois au moins du titre des IgG* et/ou PCR positive et/ou culture positive) ou - cas clinique ayant été en contact dans les 7 à 18 jours avant le début de l’éruption avec un cas confirmé. * en l’absence de vaccination récente"
+}

@@ -1,0 +1,281 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2022-01-04T15:51:19.337+00:00",
+    "source": "#9cXco5ZwPFBLWMDN",
+    "profile": [ "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7" ],
+    "tag": [ {
+      "code": "lformsVersion: 29.2.1"
+    } ]
+  },
+  "version": "0.1",
+  "name": "BilanPartageMedication",
+  "title": "Bilan partagé de médication",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-08T14:00:00.000Z",
+  "publisher": "ANS",
+  "copyright": "Assurance Maladie",
+  "item": [ {
+    "linkId": "1",
+    "text": "Observance du patient",
+    "type": "group",
+    "required": false,
+    "item": [ {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.1",
+      "prefix": "1.1",
+      "text": "Ce matin avez-vous oublié de prendre votre médicament?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.2",
+      "prefix": "1.2",
+      "text": "Avez-vous déjà été en panne de médicament ?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.3",
+      "prefix": "1.3",
+      "text": "Traitement en retard?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.4",
+      "prefix": "1.4",
+      "text": "Vous est-il arrivé de ne pas prendre votre traitement",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.5",
+      "prefix": "1.5",
+      "text": "Vous est-il arrivé de ne pas prendre votre traitement parce que, certains jours, vous avez l’impression que le traitement vous fait plus de mal que de bien ?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "drop-down",
+            "display": "Drop down"
+          } ],
+          "text": "Drop down"
+        }
+      } ],
+      "linkId": "1.6",
+      "prefix": "1.6",
+      "text": "Pensez-vous que vous avez trop de médicaments à prendre ?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 1
+        } ],
+        "valueCoding": {
+          "display": "Oui"
+        }
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal": 0
+        } ],
+        "valueCoding": {
+          "display": "Non"
+        }
+      } ]
+    }, {
+      "linkId": "1.7",
+      "text": "Score de Girerd",
+      "type": "decimal",
+      "required": false,
+      "readOnly": true,
+      "item": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "http://hl7.org/fhir/questionnaire-item-control",
+              "code": "help",
+              "display": "Help-Button"
+            } ],
+            "text": "Help-Button"
+          }
+        } ],
+        "linkId": "1.7-help",
+        "text": "Bonne observance : score = 6 / Faible observance : score = 4 ou 5 / Non observance : score < 3",
+        "type": "display"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/questionnaire-item-control",
+            "code": "help",
+            "display": "Help-Button"
+          } ],
+          "text": "Help-Button"
+        }
+      } ],
+      "linkId": "1-help",
+      "text": "Questionnaire de Girerd (1 pt par réponse négative)",
+      "type": "display"
+    } ]
+  }, {
+    "text": "Conclusion",
+    "type": "group",
+    "required": false,
+    "item": [ {
+      "prefix": "2.1",
+      "text": "Si le plan de posologie a été modifié, le remettre au patient",
+      "type": "display"
+    }, {
+      "text": "Remarques / questions du patient",
+      "type": "text",
+      "required": false
+    } ]
+  } ]
+}

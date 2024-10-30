@@ -1,0 +1,868 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "Certificat de Santé de l'Enfant - CS8",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Enfant",
+      "type": "group",
+      "linkId": "6682706402586",
+      "item": [
+        {
+          "text": "Nom",
+          "linkId": "6801323674695",
+          "type": "string",
+          "repeats": false,
+          "required": true
+        },
+        {
+          "text": "Prénom",
+          "linkId": "7281091486669",
+          "type": "string",
+          "required": true
+        },
+        {
+          "text": "Date de naissance",
+          "linkId": "1641740514054",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        }
+      ],
+      "repeats": false,
+      "readOnly": true,
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Famille",
+      "linkId": "2566085569005",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Nom de naissance de la mère",
+          "linkId": "4417062958953",
+          "type": "string"
+        },
+        {
+          "text": "Prénom de la mère",
+          "linkId": "4439307121334",
+          "type": "string"
+        },
+        {
+          "text": "Date de naissance de la mère",
+          "linkId": "4889106773610",
+          "type": "date"
+        },
+        {
+          "text": "Nombre d'enfant vivant au foyer avant la naissance",
+          "linkId": "9406794017469",
+          "type": "integer"
+        },
+        {
+          "text": "Niveau d'étude de la mère",
+          "linkId": "9204039296027",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Ecole primaire"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Collège"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Lycée"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Bac +1 +2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Bac +3 et +"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Couverture sociale en début de grossesse",
+          "linkId": "1118368577905",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Sécurité sociale"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Aucune"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "AME"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Activité professionnelle de la mère",
+          "linkId": "4321473215333",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Activité salarié"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Autre activité"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Retraité"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Au foyer"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "Pour la mère, en début de grossesse",
+              "type": "display",
+              "linkId": "4321473215333_helpText",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Activité professionnelle du père",
+          "linkId": "1833959633032",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Activité salarié"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Autre activité"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Retraité"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Au foyer"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "Pour le père, au moment de la naissance",
+              "type": "display",
+              "linkId": "1833959633032_helpText",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "repeats": false,
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Antécédents",
+      "linkId": "6534199061541",
+      "type": "group",
+      "repeats": false,
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Nombre d'enfants :",
+          "linkId": "4339800401540",
+          "type": "string",
+          "repeats": false,
+          "readOnly": true,
+          "item": [
+            {
+              "text": "nés avant 37 semaines",
+              "linkId": "7896460970137",
+              "type": "integer"
+            },
+            {
+              "text": "pesant moins de 2500 g",
+              "linkId": "6788264108832",
+              "type": "integer"
+            },
+            {
+              "text": "Morts-nés",
+              "linkId": "17743683272",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Antécédents de césarienne",
+          "linkId": "8651475710025",
+          "type": "boolean"
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Grossesse",
+      "linkId": "1255423671902",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Gestité",
+          "linkId": "6446334400498",
+          "type": "integer"
+        },
+        {
+          "text": "Parité",
+          "linkId": "9728976384262",
+          "type": "integer"
+        },
+        {
+          "text": "Poids",
+          "linkId": "5084379270343",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "kg",
+                "display": "kilogram"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Taille",
+          "linkId": "3540694671207",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "m",
+                "display": "meter"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Déclaration de grossesse",
+          "linkId": "9009363611441",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "NS",
+                "display": "Non suivi"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "T1",
+                "display": "1er trimestre"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "T2",
+                "display": "2ème trimestre"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "T3",
+                "display": "3ème trimestre"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Pathologie en cours de grossesse",
+          "linkId": "3941095304396",
+          "type": "boolean",
+          "item": [
+            {
+              "text": "Prééclampsie",
+              "linkId": "1404222525107",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "3941095304396",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "HTA traitée",
+              "linkId": "6104944015740",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "3941095304396",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Diabète gestationnel",
+              "linkId": "5797828025224",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "3941095304396",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Autre pathologie",
+              "linkId": "6928438282141",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "3941095304396",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Nombre de jours d'hospitalisation (y compris domicile)",
+          "linkId": "7520438134909",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "d",
+                "display": "day"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Motif de l'hospitalisation",
+          "linkId": "9058513262211",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "H",
+                "display": "HTA"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "P",
+                "display": "PAG"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "M",
+                "display": "MAP"
+              }
+            }
+          ]
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Accouchement",
+      "linkId": "1073018855573",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Nombre de foetus",
+          "linkId": "9646400792284",
+          "type": "integer",
+          "item": [
+            {
+              "text": "Rang de naissance (si >1)",
+              "linkId": "5234303272697",
+              "type": "integer",
+              "enableWhen": [
+                {
+                  "question": "9646400792284",
+                  "operator": ">",
+                  "answerInteger": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Age gestionnel (SA)",
+          "linkId": "1646609569133",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "wk",
+                "display": "week"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Présentation",
+          "linkId": "3497408319003",
+          "type": "open-choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "SO",
+                "display": "Sommet"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "SI",
+                "display": "Siège"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "AU",
+                "display": "Autre"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Début du travail",
+          "linkId": "9118156771148",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "S",
+                "display": "Spontanné"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "D",
+                "display": "Déclenché"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C",
+                "display": "Césarienne avant travail"
+              }
+            }
+          ]
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Etat de l'enfant à la naissance",
+      "linkId": "1495438342614",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Poids",
+          "linkId": "46567569051",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "g",
+                "display": "gram"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Taille",
+          "linkId": "7790333111476",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Périmètre cranien",
+          "linkId": "8149779904088",
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            }
+          ]
+        },
+        {
+          "text": "APGAR à  1 mn",
+          "linkId": "1694689754476",
+          "type": "integer"
+        },
+        {
+          "text": "APGAR à 5 mn",
+          "linkId": "7087348478639",
+          "type": "integer"
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Pathologie de la première semaine",
+      "linkId": "623293439230",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Détresse respiratoire",
+          "linkId": "3188859317627",
+          "type": "boolean"
+        },
+        {
+          "text": "Antibiothérapie",
+          "linkId": "8468004497894",
+          "type": "boolean"
+        },
+        {
+          "text": "Pathologie neurologique",
+          "linkId": "9916248971723",
+          "type": "boolean"
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Anomalies congénitales",
+      "linkId": "3014899832055",
+      "type": "group",
+      "readOnly": true,
+      "item": [
+        {
+          "text": "Anomalies congénitales",
+          "linkId": "6130593351335",
+          "type": "boolean",
+          "item": [
+            {
+              "text": "Syndrome polymalformatif",
+              "linkId": "599907251999",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Anomalie du tube neural",
+              "linkId": "2392469460942",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Fente labio-palatine",
+              "linkId": "2821457798914",
+              "type": "boolean",
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Malformation rénale",
+              "linkId": "5078148766437",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "S",
+                    "display": "Suspectée"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C",
+                    "display": "Certaine"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Hydrocéphalie",
+              "linkId": "6370591378749",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "S",
+                    "display": "Suspecté"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C",
+                    "display": "Certaine"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Malformation cardiaque",
+              "linkId": "4513367182794",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "S",
+                    "display": "Suspectée"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C",
+                    "display": "Certaine"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "text": "Autre anommalie congénitale",
+              "linkId": "2172941284369",
+              "type": "open-choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "S",
+                    "display": "Suspectée"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C",
+                    "display": "Certaine"
+                  }
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "6130593351335",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Autres informations",
+      "linkId": "7970874406315",
+      "type": "group",
+      "item": [
+        {
+          "text": "Allaitement au sein",
+          "linkId": "3807073933897",
+          "type": "boolean"
+        },
+        {
+          "text": "Vaccination par le BCG",
+          "linkId": "4134070229967",
+          "type": "boolean"
+        }
+      ],
+      "readOnly": true,
+      "_text": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+            "valueString": "{font-family: verdana; font-size: 20px;}"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "Certificat de Santé de l'Enfant au 8ème jour",
+  "purpose": "Certificat de Santé de l'Enfant au 8ème jour - CS8",
+  "code": [
+    {
+      "system": "http://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+      "code": "CERT_DECL"
+    }
+  ]
+}
